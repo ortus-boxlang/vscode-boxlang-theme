@@ -2,7 +2,7 @@
     "name": "vscode-boxlang-theme",
     "displayName": "BoxLang Theme",
     "description": "Modern dark and light themes for BoxLang development with neon and muted variations",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "ortus-solutions",
     "icon": "icons/icon_1024x1024.png",
     "author": "Ortus Solutions",
