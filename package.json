@@ -1,0 +1,78 @@
+{
+    "name": "vscode-boxlang-theme",
+    "displayName": "BoxLang Theme",
+    "description": "Eye-popping dark and light themes for BoxLang development with multiple variations",
+    "version": "1.0.0",
+    "publisher": "ortus-solutions",
+    "icon": "icons/icon_1024x1024.png",
+    "author": "Ortus Solutions",
+    "license": "Apache-2.0",
+    "engines": {
+        "vscode": "^1.100.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ortus-boxlang/vscode-boxlang-theme.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ortus-boxlang/vscode-boxlang-theme/issues"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "boxlang",
+        "theme",
+        "dark",
+        "light",
+        "colorful",
+        "neon",
+        "bold"
+    ],
+    "galleryBanner": {
+        "color": "#1a1a1a",
+        "theme": "dark"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "BoxLang Dark (Bold)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/boxlang-dark-bold.json"
+            },
+            {
+                "label": "BoxLang Dark (Muted)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/boxlang-dark-muted.json"
+            },
+            {
+                "label": "BoxLang Dark (Neon Green)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/boxlang-dark-neon.json"
+            },
+            {
+                "label": "BoxLang Light (Bold)",
+                "uiTheme": "vs",
+                "path": "./themes/boxlang-light-bold.json"
+            },
+            {
+                "label": "BoxLang Light (Muted)",
+                "uiTheme": "vs",
+                "path": "./themes/boxlang-light-muted.json"
+            },
+            {
+                "label": "BoxLang Light (Neon Green)",
+                "uiTheme": "vs",
+                "path": "./themes/boxlang-light-neon.json"
+            }
+        ]
+    },
+    "scripts": {
+        "build": "npm run compile-themes",
+        "compile-themes": "node scripts/build-themes.js",
+        "dev:host": "node scripts/open-dev-host.js"
+    },
+    "devDependencies": {
+        "@types/node": "^18.0.0"
+    }
+}

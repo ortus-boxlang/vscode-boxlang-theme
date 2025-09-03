@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "name": "BoxLang Theme",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "BoxLang Dark (Bold)"
+  }
+}

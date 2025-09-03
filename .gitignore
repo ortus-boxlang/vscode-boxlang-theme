@@ -1,0 +1,22 @@
+## Dependencies
+node_modules
+
+## out and testing
+out
+dist/
+target/**
+
+## Logs + IDEs
+.vsix
+*.vsix
+.vscode-test/
+.history/
+npm-debug.log
+
+## Mac
+.DS_Store
+Thumbs.db
+coverage/
+
+## Pack
+vscode-testbox-*.tgz
