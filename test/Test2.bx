@@ -1,0 +1,158 @@
+/**
+ * BoxLang Theme Test File
+ * This file contains various BoxLang syntax elements to test theme highlighting
+ */
+
+// Import statements
+import "lucee.jar" as jarLib;
+import java.util.List;
+
+/**
+ * Main application class for BoxLang theme testing
+ * @author Ortus Solutions
+ * @since 1.0.0
+ */
+class name="ThemeTest" {
+
+    // Properties with different modifiers
+    property name="publicProp" type="string" default="test";
+    property name="privateProp" type="numeric" access="private" default=42;
+
+    // Static variables
+    static {
+        variables.CONSTANT_VALUE = "BOXLANG_THEME";
+        variables.numbers = [1, 2, 3, 4, 5];
+    }
+
+    /**
+     * Constructor method
+     */
+    function init() {
+        variables.initialized = true;
+        variables.config = {
+            "theme": "BoxLang Dark (Bold)",
+            "version": 1.0,
+            "features": ["syntax", "highlighting", "colors"],
+            "active": true
+        };
+        return this;
+    }
+
+    /**
+     * Public method demonstrating various syntax elements
+     * @param message The message to process
+     * @param options Configuration options
+     * @returns Processed result
+     */
+    public function processData(required string message, struct options = {}) {
+        // Local variables
+        var result = "";
+        var counter = 0;
+
+        // Control structures
+        if (len(arguments.message) > 0) {
+            // Loop structures
+            for (var i = 1; i <= len(message); i++) {
+                var char = mid(message, i, 1);
+
+                switch (char) {
+                    case "A":
+                    case "E":
+                    case "I":
+                    case "O":
+                    case "U":
+                        result &= ucase(char);
+                        break;
+                    default:
+                        result &= lcase(char);
+                }
+                counter++;
+            }
+        }
+
+        // Exception handling
+        try {
+            var apiCall = makeHttpRequest(result);
+            return {
+                "success": true,
+                "data": apiCall,
+                "processed": result,
+                "count": counter,
+                "timestamp": now()
+            };
+        }
+        catch (any e) {
+            writeLog("ERROR", "Failed to process: " & e.message);
+            return {
+                "success": false,
+                "error": e.message,
+                "type": e.type
+            };
+        }
+    }
+
+    /**
+     * Private method for HTTP requests
+     */
+    private function makeHttpRequest(string data) {
+        // HTTP service example
+        var httpService = new Http();
+        httpService.setUrl("https://api.boxlang.io/process");
+        httpService.setMethod("POST");
+        httpService.addParam(type="body", value=serializeJSON({"data": data}));
+
+        var result = httpService.send().getPrefix();
+        return deserializeJSON(result.fileContent);
+    }
+
+    /**
+     * Static method example
+     */
+    static function getThemeInfo() {
+        return {
+            "name": "BoxLang Theme Pack",
+            "variants": [
+                "BoxLang Dark (Bold)",
+                "BoxLang Dark (Muted)",
+                "BoxLang Dark (Neon Green)",
+                "BoxLang Light (Bold)",
+                "BoxLang Light (Muted)",
+                "BoxLang Light (Neon Green)"
+            ],
+            "colors": {
+                "primary": "##ff6b35",
+                "secondary": "##20b2aa",
+                "accent": "##39ff14"
+            }
+        };
+    }
+}
+
+// Script execution
+function main() {
+    var tester = new ThemeTest();
+    var result = tester.processData("Hello BoxLang World!");
+
+    writeOutput("Result: " & serializeJSON(result));
+
+    // Query example
+    var qryData = queryNew(
+        "id,name,email,active",
+        "integer,varchar,varchar,boolean",
+        [
+            [1, "John Doe", "john@boxlang.io", true],
+            [2, "Jane Smith", "jane@boxlang.io", false],
+            [3, "Bob Wilson", "bob@boxlang.io", true]
+        ]
+    );
+
+    // Query loop
+    for (var row in qryData) {
+        if (row.active) {
+            writeOutput("Active user: " & row.name & " (" & row.email & ")");
+        }
+    }
+}
+
+// Call main function
+main();

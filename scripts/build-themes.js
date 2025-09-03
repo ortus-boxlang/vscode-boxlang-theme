@@ -8,14 +8,8 @@ console.log( '🎨 Building BoxLang Themes...' );
 // Verify all theme files exist
 const themeDir = path.join( __dirname, '..', 'themes' );
 const expectedThemes = [
-    'boxlang-dark-bold.json',
-    'boxlang-dark-muted.json',
     'boxlang-dark-neon.json',
-    'boxlang-light-bold.json',
-    'boxlang-light-muted.json',
-    'boxlang-light-neon.json',
-    'boxlang-dark-synthwave.json',
-    'boxlang-light-synthwave.json'
+    'boxlang-light.json'
 ];
 
 let allThemesValid = true;

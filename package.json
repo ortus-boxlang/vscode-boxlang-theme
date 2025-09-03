@@ -1,7 +1,7 @@
 {
     "name": "vscode-boxlang-theme",
     "displayName": "BoxLang Theme",
-    "description": "Eye-popping dark and light themes for BoxLang development with multiple variations",
+    "description": "Modern dark and light themes for BoxLang development with neon and muted variations",
     "version": "1.0.0",
     "publisher": "ortus-solutions",
     "icon": "icons/icon_1024x1024.png",
@@ -37,44 +37,14 @@
     "contributes": {
         "themes": [
             {
-                "label": "BoxLang Dark (Bold)",
-                "uiTheme": "vs-dark",
-                "path": "./themes/boxlang-dark-bold.json"
-            },
-            {
-                "label": "BoxLang Dark (Muted)",
-                "uiTheme": "vs-dark",
-                "path": "./themes/boxlang-dark-muted.json"
-            },
-            {
-                "label": "BoxLang Dark (Neon Green)",
+                "label": "BoxLang Dark (Neon)",
                 "uiTheme": "vs-dark",
                 "path": "./themes/boxlang-dark-neon.json"
             },
             {
-                "label": "BoxLang Dark (Synthwave)",
-                "uiTheme": "vs-dark",
-                "path": "./themes/boxlang-dark-synthwave.json"
-            },
-            {
-                "label": "BoxLang Light (Bold)",
-                "uiTheme": "vs",
-                "path": "./themes/boxlang-light-bold.json"
-            },
-            {
                 "label": "BoxLang Light (Muted)",
                 "uiTheme": "vs",
-                "path": "./themes/boxlang-light-muted.json"
-            },
-            {
-                "label": "BoxLang Light (Neon Green)",
-                "uiTheme": "vs",
-                "path": "./themes/boxlang-light-neon.json"
-            },
-            {
-                "label": "BoxLang Light (Synthwave)",
-                "uiTheme": "vs",
-                "path": "./themes/boxlang-light-synthwave.json"
+                "path": "./themes/boxlang-light.json"
             }
         ]
     },
