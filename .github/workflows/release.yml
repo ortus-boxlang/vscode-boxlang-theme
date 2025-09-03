@@ -79,8 +79,8 @@ jobs:
     name: Publish to VS marketplace
     runs-on: ubuntu-latest
     needs: package
-    # Only for master branch
-    if: github.ref == 'refs/heads/master'
+    # Only if not snapshot
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v5
 
@@ -97,7 +97,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: package
     # Only for master branch
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v5
 
@@ -114,7 +114,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: package
     # Only for master branch
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v5
 
@@ -186,7 +186,7 @@ jobs:
   prepNextRelease:
     name: Bump New Release
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     needs: [ publishGH ]
     steps:
       # Checkout development
