@@ -9,22 +9,26 @@ A collection of eye-popping, vibrant themes designed specifically for BoxLang de
 ### Dark Themes
 
 - **BoxLang Dark (Bold)** - Vibrant colors with high contrast for enhanced readability
-- **BoxLang Dark (Muted)** - Softer, more subdued colors for extended coding sessions
-- **BoxLang Dark (Neon Green)** - Electric green accents with BoxLang orange for a cyberpunk aesthetic
+- **BoxLang Dark (Muted)** - Softer, more subdued colors for extended coding sessions featuring teal and green accents
+- **BoxLang Dark (Neon)** - Electric neon accents with darker readable greens for a cyberpunk aesthetic
+- **BoxLang Dark (Synthwave)** - Retro synthwave vibes with pink, violet, and cyan on a dark purple background
 
 ### Light Themes
 
 - **BoxLang Light (Bold)** - Crisp, vibrant colors on a clean white background
 - **BoxLang Light (Muted)** - Gentle, professional colors for a refined look
-- **BoxLang Light (Neon Green)** - Bright green highlights with orange accents
+- **BoxLang Light (Neon)** - Bright highlights with improved readability on light background
+- **BoxLang Light (Synthwave)** - Inspired by Winter is Coming light with BoxLang branded accents
 
 ## 🚀 Features
 
-- **Semantic Highlighting** - Enhanced syntax highlighting for better code understanding
-- **BoxLang Optimized** - Colors specifically chosen to complement BoxLang syntax
-- **Eye-friendly** - Carefully balanced contrast ratios for comfortable coding
+- **Semantic Highlighting** - Enhanced syntax highlighting for better code understanding with consistent token colors
+- **BoxLang Optimized** - Colors specifically chosen to complement BoxLang syntax and branding
+- **Eye-friendly** - Carefully balanced contrast ratios with readable color choices
 - **Consistent UI** - Themed interface elements including sidebar, tabs, and status bar
-- **Multiple Variations** - Choose from bold, muted, or neon styles in both dark and light modes
+- **Multiple Variations** - Choose from bold, muted, neon, or synthwave styles in both dark and light modes
+- **Bracket Pair Colorization** - Color-coded bracket pairs for better code structure visualization
+- **Centralized Palette** - Consistent color management across all theme variations
 
 ## 📦 Installation
 
@@ -70,22 +74,31 @@ For the best experience with BoxLang themes, consider these VS Code settings:
 
 ### BoxLang Orange (Primary)
 
-- `#FF6B35` - Main brand color used for variables and highlights
-- `#FF4500` - Operators and secondary elements
-- `#FFB347` - Read-only variables and constants
+- `#FF6B35` - Main brand color used for primary highlights and operators
+- `#FF9A6B` - Light variant for secondary elements
+- `#FF8C69` - Muted variant for subtle accents
 
-### Accent Colors
+### Core Accent Colors
 
-- **Functions:** `#00CED1` (Dark Turquoise) / `#0000CD` (Medium Blue)
-- **Strings:** `#32CD32` (Lime Green) / `#008000` (Green)
-- **Keywords:** `#FF1493` (Deep Pink) / `#DC143C` (Crimson)
-- **Classes:** `#9370DB` (Medium Purple) / `#8B008B` (Dark Magenta)
-- **Comments:** `#696969` (Dim Gray) / `#708090` (Slate Gray)
+- **Teal & Cyan Family:** `#00CED1` (Dark Turquoise), `#06B6D4` (Cyan), `#40E0D0` (Turquoise Light)
+- **Purple & Blue Family:** `#7C5CFA` (Accent Purple), `#1E90FF` (Dodger Blue)
+- **Green Family:** `#32CD32` (Lime Green), `#2E8B57` (Sea Green), `#00FA9A` (Medium Spring Green)
+- **Specialized:** `#FFD700` (Gold), `#696969` (Comment Gray)
 
-### Neon Variations
+### Synthwave Colors
 
-- **Neon Green:** `#39FF14`, `#00FF00`, `#CCFF00`
-- **Electric Accents:** `#7FFF00`, `#ADFF2F`, `#32CD32`
+- **Pink & Violet:** `#FF1493` (Deep Pink), `#DA70D6` (Orchid)
+- **Electric:** `#00FFFF` (Cyan), `#FFA500` (Orange)
+- **Backgrounds:** `#0D0221` (Deep Purple), `#1A0B2E` (Purple Light)
+
+### Bracket Pair Colors
+
+A 4-color cycle for bracket pair colorization:
+
+1. `#FF6B35` (BoxLang Orange)
+2. `#7C5CFA` (Purple)
+3. `#06B6D4` (Cyan)
+4. `#34D399` (Emerald Green)
 
 ## 📸 Screenshots
 
@@ -94,12 +107,14 @@ For the best experience with BoxLang themes, consider these VS Code settings:
 ![BoxLang Dark Bold](images/dark-bold.png)
 ![BoxLang Dark Muted](images/dark-muted.png)
 ![BoxLang Dark Neon](images/dark-neon.png)
+![BoxLang Dark Synthwave](images/dark-synthwave.png)
 
 ### Light Themes
 
 ![BoxLang Light Bold](images/light-bold.png)
 ![BoxLang Light Muted](images/light-muted.png)
 ![BoxLang Light Neon](images/light-neon.png)
+![BoxLang Light Synthwave](images/light-synthwave.png)
 
 ## 🛠 Development
 
@@ -117,11 +132,29 @@ npm install
 npm run build
 ```
 
+### Testing Themes
+
+To test themes during development:
+
+```bash
+npm run dev:host
+```
+
+This opens VS Code Extension Development Host with the test folder loaded.
+
 ### Palette and contributing color changes
 
-We now centralize shared colors in `themes/palette.json`. When proposing changes to colors, update `palette.json` first — the build script will inject bracket highlights and a standardized set of semantic token colors into each theme.
+We centralize shared colors in `themes/palette.json`. When proposing changes to colors, update `palette.json` first — the build script will inject bracket highlights and semantic token colors into each theme automatically.
 
-If you use GitHub Copilot or other AI assistants, follow the repo guidance in `COPILOT_INSTRUCTIONS.md` to keep spacing, palette usage, and bracket highlighting consistent.
+The centralized palette includes:
+
+- Primary BoxLang orange variants
+- Teal and green accent families for improved branding alignment  
+- Synthwave color schemes for retro themes
+- Consistent bracket pair colorization
+- Background and foreground colors for all theme types
+
+If you use GitHub Copilot or other AI assistants, follow the repo guidance in `.github/copilot-instructions.md` to keep spacing, palette usage, and bracket highlighting consistent.
 
 ### Toggleable light preset (what it means)
 

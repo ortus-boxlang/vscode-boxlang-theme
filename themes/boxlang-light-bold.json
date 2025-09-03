@@ -241,8 +241,7 @@
                 "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
             ],
             "settings": {
-                "foreground": "#008000",
-                "fontStyle": "bold"
+                "foreground": "#008000"
             }
         },
         {
@@ -258,8 +257,7 @@
                 "support.type.sys-types"
             ],
             "settings": {
-                "foreground": "#8B008B",
-                "fontStyle": "bold"
+                "foreground": "#8B008B"
             }
         },
         {

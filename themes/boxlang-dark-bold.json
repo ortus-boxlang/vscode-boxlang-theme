@@ -3,22 +3,22 @@
     "type": "dark",
     "semanticHighlighting": true,
     "semanticTokenColors": {
-        "variable": "#FF6B35",
-        "variable.readonly": "#FFB347",
-        "variable.local": "#FF8C69",
+        "variable": "#00CED1",
+        "variable.readonly": "#40E0D0", 
+        "variable.local": "#20B2AA",
         "parameter": "#87CEEB",
-        "function": "#00CED1",
-        "method": "#00CED1",
-        "class": "#9370DB",
-        "interface": "#DDA0DD",
+        "function": "#00FFFF",
+        "method": "#00FFFF",
+        "class": "#7FFFD4",
+        "interface": "#AFEEEE",
         "enum": "#F0E68C",
         "namespace": "#98FB98",
-        "type": "#FFD700",
-        "keyword": "#FF1493",
-        "operator": "#FF4500",
+        "type": "#00FA9A",
+        "keyword": "#FF6B35",
+        "operator": "#FF8C69",
         "string": "#32CD32",
-        "number": "#FF69B4",
-        "boolean": "#FF6347",
+        "number": "#FFD700",
+        "boolean": "#87CEFA",
         "comment": "#696969"
     },
     "colors": {
@@ -238,8 +238,7 @@
                 "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
             ],
             "settings": {
-                "foreground": "#32CD32",
-                "fontStyle": "bold"
+                "foreground": "#32CD32"
             }
         },
         {
@@ -255,8 +254,7 @@
                 "support.type.sys-types"
             ],
             "settings": {
-                "foreground": "#9370DB",
-                "fontStyle": "bold"
+                "foreground": "#9370DB"
             }
         },
         {
