@@ -17,7 +17,7 @@
         "keyword": "#8B008B",
         "operator": "#2E8B57",
         "string": "#228B22",
-        "number": "#FF6B35",
+        "number": "#DD35FF",
         "boolean": "#4682B4",
         "comment": "#708090"
     },
@@ -115,7 +115,7 @@
                 "string constant.other.placeholder"
             ],
             "settings": {
-                "foreground": "#CD853F"
+                "foreground": "#1EAE72"
             }
         },
         {
@@ -124,7 +124,7 @@
                 "constant.other.color"
             ],
             "settings": {
-                "foreground": "#2F4F4F"
+                "foreground": "#3A7C7C"
             }
         },
         {
@@ -145,7 +145,7 @@
                 "storage.modifier"
             ],
             "settings": {
-                "foreground": "#B22222"
+                "foreground": "#22B26F"
             }
         },
         {
@@ -165,7 +165,7 @@
                 "keyword.other.substitution"
             ],
             "settings": {
-                "foreground": "#CD5C5C"
+                "foreground": "#31A020"
             }
         },
         {
@@ -198,7 +198,7 @@
                 "meta.block variable.other"
             ],
             "settings": {
-                "foreground": "#CD853F"
+                "foreground": "#3FACCD"
             }
         },
         {
@@ -208,7 +208,7 @@
                 "string.other.link"
             ],
             "settings": {
-                "foreground": "#D2691E"
+                "foreground": "#2EAAD0"
             }
         },
         {
@@ -224,7 +224,7 @@
                 "keyword.other"
             ],
             "settings": {
-                "foreground": "#D2B48C"
+                "foreground": "#A28CD2"
             }
         },
         {
@@ -255,7 +255,7 @@
                 "support.type.sys-types"
             ],
             "settings": {
-                "foreground": "#8B008B"
+                "foreground": "#00768B"
             }
         },
         {
@@ -264,7 +264,7 @@
                 "support.type"
             ],
             "settings": {
-                "foreground": "#DAA520"
+                "foreground": "#A220DA"
             }
         },
         {
@@ -287,7 +287,7 @@
                 "entity.other.attribute-name"
             ],
             "settings": {
-                "foreground": "#8B008B"
+                "foreground": "#036F71"
             }
         },
         {
@@ -298,7 +298,7 @@
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#DAA520"
+                "foreground": "#26DA20"
             }
         },
         {
