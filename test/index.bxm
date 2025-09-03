@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxLang Sample Template</title>
+</head>
+<body>
+    <h1>Welcome to BoxLang</h1>
+
+    <bx:set name="currentDate" value="#now()#" />
+    <bx:set name="users" value="[
+        {name: 'John Doe', email: 'john@example.com', active: true},
+        {name: 'Jane Smith', email: 'jane@example.com', active: false},
+        {name: 'Bob Johnson', email: 'bob@example.com', active: true}
+    ]" />
+
+    <p>Current date: <bx:output>#dateFormat(currentDate, 'mm/dd/yyyy')#</bx:output></p>
+
+    <h2>User List</h2>
+    <bx:if condition="#arrayLen(users) gt 0#">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <bx:loop array="#users#" index="user">
+                    <tr>
+                        <td><bx:output>#user.name#</bx:output></td>
+                        <td><bx:output>#user.email#</bx:output></td>
+                        <td>
+                            <bx:if condition="#user.active#">
+                                <span style="color: green;">Active</span>
+                            <bx:else>
+                                <span style="color: red;">Inactive</span>
+                            </bx:if>
+                        </td>
+                    </tr>
+                </bx:loop>
+            </tbody>
+        </table>
+    <bx:else>
+        <p>No users found.</p>
+    </bx:if>
+
+    <h2>Current Time</h2>
+    <p>The current time is: <bx:output>#timeFormat(now(), 'hh:mm:ss tt')#</bx:output></p>
+
+</body>
+</html>
