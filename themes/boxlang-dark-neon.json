@@ -256,8 +256,39 @@
         {
             "scope": "entity.name.tag",
             "settings": {
-                "foreground": "#FF1493",
+                "foreground": "#14FFE0",
                 "fontStyle": "bold"
+            }
+        },
+        {
+            "scope": [
+                "entity.name.tag.boxlang",
+                "entity.name.tag.bx"
+            ],
+            "settings": {
+                "foreground": "#35FF78",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "scope": [
+                "entity.name.tag.boxlang.component",
+                "meta.tag.boxlang entity.name.tag",
+                "source.boxlang entity.name.tag"
+            ],
+            "settings": {
+                "foreground": "#FF6B35",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "scope": [
+                "punctuation.definition.tag.boxlang",
+                "punctuation.definition.tag.begin.boxlang",
+                "punctuation.definition.tag.end.boxlang"
+            ],
+            "settings": {
+                "foreground": "#14FF76"
             }
         },
         {
