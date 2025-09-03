@@ -29,6 +29,7 @@ Thank you for your interest in contributing to the BoxLang Theme! We welcome con
 ### File Structure
 
 Each theme file should follow the VS Code theme schema and include:
+
 - Basic theme metadata (name, type, semanticHighlighting)
 - Semantic token colors for enhanced highlighting
 - UI colors for consistent interface theming
@@ -55,6 +56,10 @@ Before submitting a pull request:
 
 Please be respectful and constructive in all interactions. We're all here to make BoxLang development more enjoyable and productive.
 
-## Questions?
+## Support Questions
 
-If you have questions about contributing, please open an issue or reach out to the maintainers.
+If you have questions about contributing, please open an issue or reach out to the maintainers.  You can also get professional support through the [Ortus Solutions Support Plans](https://www.ortussolutions.com/services/support) if needed.
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability in this project, please report it privately by contacting the maintainers. We take security seriously and will work with you to address any issues.

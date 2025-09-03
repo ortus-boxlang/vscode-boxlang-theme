@@ -1,22 +1,22 @@
 #!/usr/bin/env node
-const { spawn } = require('child_process');
-const path = require('path');
-const fs = require('fs');
+const { spawn } = require( 'child_process' );
+const path = require( 'path' );
+const fs = require( 'fs' );
 
 // Purpose: Open VS Code Extension Development Host with this extension and the test folder
 // Usage: node scripts/open-dev-host.js
 
-function whichCodeCli() {
+function whichCodeCli () {
     // Prefer 'code' in PATH. On macOS users might have 'code' available if they installed "Shell Command: Install 'code' command in PATH".
     return 'code';
 }
 
-const repoRoot = path.resolve(__dirname, '..');
-const testFolder = path.join(repoRoot, 'test');
+const repoRoot = path.resolve( __dirname, '..' );
+const testFolder = path.join( repoRoot, 'test' );
 
-if (!fs.existsSync(testFolder)) {
-    console.error('[open-dev-host] test folder not found at:', testFolder);
-    process.exit(2);
+if ( !fs.existsSync( testFolder ) ) {
+    console.error( '[open-dev-host] test folder not found at:', testFolder );
+    process.exit( 2 );
 }
 
 const codeCli = whichCodeCli();
@@ -31,15 +31,15 @@ const args = [
     testFolder
 ];
 
-const proc = spawn(codeCli, args, { stdio: 'inherit' });
+const proc = spawn( codeCli, args, { stdio: 'inherit' } );
 
-proc.on('error', (err) => {
-    console.error('[open-dev-host] Failed to run "code". Make sure the VS Code command-line is installed and on your PATH.');
-    console.error(err.message);
-    console.error("On macOS: open Command Palette and run \"Shell Command: Install 'code' command in PATH\"");
-    process.exit(1);
-});
+proc.on( 'error', ( err ) => {
+    console.error( '[open-dev-host] Failed to run "code". Make sure the VS Code command-line is installed and on your PATH.' );
+    console.error( err.message );
+    console.error( "On macOS: open Command Palette and run \"Shell Command: Install 'code' command in PATH\"" );
+    process.exit( 1 );
+} );
 
-proc.on('close', (code) => {
-    process.exit(code);
-});
+proc.on( 'close', ( code ) => {
+    process.exit( code );
+} );

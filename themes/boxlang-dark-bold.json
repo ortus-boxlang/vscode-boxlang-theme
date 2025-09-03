@@ -83,7 +83,7 @@
     },
     "tokenColors": [
         {
-        "name": "Comments",
+            "name": "Comments",
             "scope": [
                 "comment",
                 "punctuation.definition.comment"

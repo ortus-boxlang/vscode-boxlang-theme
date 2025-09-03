@@ -27,7 +27,8 @@
         "light",
         "colorful",
         "neon",
-        "bold"
+        "bold",
+        "synthwave"
     ],
     "galleryBanner": {
         "color": "#1a1a1a",
@@ -51,6 +52,11 @@
                 "path": "./themes/boxlang-dark-neon.json"
             },
             {
+                "label": "BoxLang Dark (Synthwave)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/boxlang-dark-synthwave.json"
+            },
+            {
                 "label": "BoxLang Light (Bold)",
                 "uiTheme": "vs",
                 "path": "./themes/boxlang-light-bold.json"
@@ -64,15 +70,26 @@
                 "label": "BoxLang Light (Neon Green)",
                 "uiTheme": "vs",
                 "path": "./themes/boxlang-light-neon.json"
+            },
+            {
+                "label": "BoxLang Light (Synthwave)",
+                "uiTheme": "vs",
+                "path": "./themes/boxlang-light-synthwave.json"
             }
         ]
     },
     "scripts": {
         "build": "npm run compile-themes",
         "compile-themes": "node scripts/build-themes.js",
-        "dev:host": "node scripts/open-dev-host.js"
+        "dev:host": "node scripts/open-dev-host.js",
+        "lint:fix": "eslint --ext .js,.ts . --fix",
+        "lint:check": "eslint --ext .js,.ts .",
+        "package": "npm run build && vsce package",
+        "vsce:install": "npm install -g @vscode/vsce"
     },
     "devDependencies": {
-        "@types/node": "^18.0.0"
+        "@types/node": "^18.0.0",
+        "@vscode/vsce": "^2.21.0",
+        "eslint": "^8.0.0"
     }
 }

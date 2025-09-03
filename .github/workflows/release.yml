@@ -27,11 +27,12 @@ on:
 
 env:
   PACKAGE_NAME: ${{ github.event.repository.name }}
-  NODE_VERSION: 20
+  NODE_VERSION: 22
   SNAPSHOT: ${{ inputs.snapshot || false }}
   BUILD_ID: ${{ github.run_number }}
 
 jobs:
+  # Create the package
   package:
     name: Package
     runs-on: ubuntu-latest
@@ -40,7 +41,7 @@ jobs:
       fileName: ${{ steps.setup-env.outputs.fileName }}
     steps:
       - name: Checkout source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -60,12 +61,10 @@ jobs:
             echo "PACKAGE_FILE_NAME=$PACKAGE_FILE_NAME" >> $GITHUB_ENV
             echo "fileName=${PACKAGE_FILE_NAME}" >> $GITHUB_OUTPUT
             echo "version=${PACKAGE_VERSION}" >> $GITHUB_OUTPUT
-            # Convert snippets to JSON
-            ./buildSnippets.sh
 
       - name: Package Extension
         run: |
-          npx vsce package
+          npm run package
 
       - name: Upload package to Artifacts
         uses: actions/upload-artifact@v4
@@ -83,9 +82,9 @@ jobs:
     # Only for master branch
     if: github.ref == 'refs/heads/master'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: ${{ needs.package.outputs.fileName }}
 
@@ -100,9 +99,9 @@ jobs:
     # Only for master branch
     if: github.ref == 'refs/heads/master'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: ${{ needs.package.outputs.fileName }}
 
@@ -117,9 +116,9 @@ jobs:
     # Only for master branch
     if: github.ref == 'refs/heads/master'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: ${{ needs.package.outputs.fileName }}
 
@@ -142,7 +141,7 @@ jobs:
             markdownlint CHANGELOG.md --fix
 
       - name: Commit Changelog To Master
-        uses: EndBug/add-and-commit@v9.1.1
+        uses: EndBug/add-and-commit@v9.1.4
         with:
           author_name: Github Actions
           author_email: info@ortussolutions.com
@@ -183,6 +182,7 @@ jobs:
           name: CHANGELOG
           path: CHANGELOG.md
 
+  #Prep for the next release
   prepNextRelease:
     name: Bump New Release
     runs-on: ubuntu-latest
@@ -191,13 +191,13 @@ jobs:
     steps:
       # Checkout development
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: development
 
       # Download build artifacts
       - name: Download build artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: CHANGELOG
 
@@ -208,7 +208,7 @@ jobs:
 
       # Commit it back
       - name: Commit Version Bump
-        uses: EndBug/add-and-commit@v9.1.1
+        uses: EndBug/add-and-commit@v9.1.4
         with:
           author_name: Github Actions
           author_email: info@ortussolutions.com
@@ -217,7 +217,7 @@ jobs:
             package.json
             CHANGELOG.md
 
-  # Publish artifact to S3
+  # Publish artifacts to S3
   publishS3:
     name: Publish to S3
     runs-on: ubuntu-latest
@@ -225,7 +225,7 @@ jobs:
     if: success()
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: ${{ needs.package.outputs.fileName }}
           path: upload
@@ -242,4 +242,4 @@ jobs:
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_SECRET }}
             SOURCE_DIR: "upload"
-            DEST_DIR: "ortussolutions/vscode-boxlang/${{ needs.package.outputs.version }}"
+            DEST_DIR: "ortussolutions/vscode-boxlang-theme/${{ needs.package.outputs.version }}"

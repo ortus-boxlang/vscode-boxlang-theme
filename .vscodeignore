@@ -27,6 +27,7 @@ yarn-error.log*
 
 # Git files
 .git/
+.github/
 .gitignore
 .gitattributes
 
@@ -34,10 +35,11 @@ yarn-error.log*
 docs/
 examples/
 *.md
+.*.json
 !README.md
-CONTRIBUTING.md
-CODE_OF_CONDUCT.md
-SECURITY.md
+!CONTRIBUTING.md
+!CODE_OF_CONDUCT.md
+!SECURITY.md
 
 # Build scripts and configuration
 scripts/

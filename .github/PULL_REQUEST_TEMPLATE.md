@@ -6,11 +6,11 @@ Please include a summary of the changes and which issue(s) is fixed. Please also
 
 IMPORTANT: Please review the [CONTRIBUTING.md](../CONTRIBUTING.md) file for detailed contributing guidelines.
 
-## Jira Issues
+## Issues
 
-All PRs must have an accompanied Jira issue. Please make sure you created it and linked it here.
+All PRs must have an accompanied issue. Please make sure you created it and linked it here.
 
-> Bug Tracker: https://ortussolutions.atlassian.net/jira/software/c/projects/COLDBOX/issues
+> Bug Tracker: https://github.com/ortus-boxlang/vscode-boxlang-theme/issues
 
 
 ## Type of change
@@ -25,7 +25,6 @@ Please delete options that are not relevant.
 
 ## Checklist
 
-- [ ] My code follows the style guidelines of this project [cfformat](../.cfformat.json)
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have made corresponding changes to the documentation
 - [ ] I have added tests that prove my fix is effective or that my feature works

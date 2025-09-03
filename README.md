@@ -117,6 +117,18 @@ npm install
 npm run build
 ```
 
+### Palette and contributing color changes
+
+We now centralize shared colors in `themes/palette.json`. When proposing changes to colors, update `palette.json` first — the build script will inject bracket highlights and a standardized set of semantic token colors into each theme.
+
+If you use GitHub Copilot or other AI assistants, follow the repo guidance in `COPILOT_INSTRUCTIONS.md` to keep spacing, palette usage, and bracket highlighting consistent.
+
+### Toggleable light preset (what it means)
+
+A toggleable light preset is a user-selectable variation of a light theme with a different contrast/accent profile (for example: `Light (Muted)` vs `Light (Neon)` vs `Light (Synthwave)`). The idea is to provide a lightweight switch so users can quickly toggle between a more muted, balanced light theme and a neon/accent-heavy light preset without switching to a completely different theme package.
+
+Implementation note: we implement each preset as its own theme JSON (e.g. `boxlang-light-muted.json`, `boxlang-light-neon.json`, `boxlang-light-synthwave.json`). The build step ensures shared palette colors stay consistent.
+
 ### Launch Extension Development Host (test folder)
 
 You can open a VS Code Extension Development Host with this repository loaded and the `test` folder opened for quick manual testing.
