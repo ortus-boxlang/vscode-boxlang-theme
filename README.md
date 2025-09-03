@@ -2,8 +2,6 @@
 
 A pair of stunning themes designed specifically for BoxLang development. These themes feature the signature BoxLang colors with carefully crafted neon and muted variations for optimal coding experience.
 
-![BoxLang Theme Preview](images/preview.png)
-
 ## 🎨 Theme Variations
 
 ### BoxLang Dark (Neon)
@@ -104,11 +102,11 @@ For the best experience with BoxLang themes, consider these VS Code settings:
 
 ### BoxLang Dark (Neon)
 
-![BoxLang Dark Neon](images/dark-neon.png)
+![BoxLang Dark Neon](screenshots/boxlang-dark.png)
 
 ### BoxLang Light (Muted)
 
-![BoxLang Light Muted](images/light-muted.png)
+![BoxLang Light Muted](screenshots/boxlang-light.png)
 
 ## 🛠 Development
 
