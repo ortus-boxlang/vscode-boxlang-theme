@@ -149,7 +149,7 @@ We centralize shared colors in `themes/palette.json`. When proposing changes to 
 The centralized palette includes:
 
 - Primary BoxLang orange variants
-- Teal and green accent families for improved branding alignment  
+- Teal and green accent families for improved branding alignment
 - Synthwave color schemes for retro themes
 - Consistent bracket pair colorization
 - Background and foreground colors for all theme types

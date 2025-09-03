@@ -4,7 +4,7 @@
     "semanticHighlighting": true,
     "semanticTokenColors": {
         "variable": "#FF6B35",
-        "variable.readonly": "#00CED1", 
+        "variable.readonly": "#00CED1",
         "variable.local": "#FF8C69",
         "parameter": "#4A90E2",
         "function": "#00688B",
