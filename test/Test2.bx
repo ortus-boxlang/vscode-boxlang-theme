@@ -126,33 +126,30 @@ class name="ThemeTest" {
             }
         };
     }
-}
 
-// Script execution
-function main() {
-    var tester = new ThemeTest();
-    var result = tester.processData("Hello BoxLang World!");
+    // Script execution
+    function main() {
+        var tester = new ThemeTest();
+        var result = tester.processData("Hello BoxLang World!");
 
-    writeOutput("Result: " & serializeJSON(result));
+        writeOutput("Result: " & serializeJSON(result));
 
-    // Query example
-    var qryData = queryNew(
-        "id,name,email,active",
-        "integer,varchar,varchar,boolean",
-        [
-            [1, "John Doe", "john@boxlang.io", true],
-            [2, "Jane Smith", "jane@boxlang.io", false],
-            [3, "Bob Wilson", "bob@boxlang.io", true]
-        ]
-    );
+        // Query example
+        var qryData = queryNew(
+            "id,name,email,active",
+            "integer,varchar,varchar,boolean",
+            [
+                [1, "John Doe", "john@boxlang.io", true],
+                [2, "Jane Smith", "jane@boxlang.io", false],
+                [3, "Bob Wilson", "bob@boxlang.io", true]
+            ]
+        );
 
-    // Query loop
-    for (var row in qryData) {
-        if (row.active) {
-            writeOutput("Active user: " & row.name & " (" & row.email & ")");
+        // Query loop
+        for (var row in qryData) {
+            if (row.active) {
+                writeOutput("Active user: " & row.name & " (" & row.email & ")");
+            }
         }
     }
 }
-
-// Call main function
-main();
