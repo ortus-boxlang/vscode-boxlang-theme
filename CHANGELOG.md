@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.0] - 2025-09-06
+
+### Added
+
+- More semantic token colors for light theme
+- Improved visibility on light theme for several tokens
+
 ## [1.0.0] - 2025-09-03
 
 - Initial Release
