@@ -298,21 +298,50 @@
         {
             "scope": [
                 "entity.name.tag.boxlang",
-                "entity.name.tag.bx"
+                "entity.name.tag.bx",
+                "entity.name.tag.boxlang.component",
+                "meta.tag.boxlang entity.name.tag",
+                "source.boxlang entity.name.tag",
+                "entity.name.tag.xml.boxlang",
+                "meta.tag.boxlang",
+                "entity.name.tag.bx.loop",
+                "entity.name.tag.bx.output",
+                "entity.name.tag.bx.if",
+                "entity.name.tag.bx.else",
+                "support.tag.boxlang",
+                "storage.type.tag.boxlang",
+                "entity.name.tag.localname.xml",
+                "entity.name.tag.namespace.xml"
             ],
             "settings": {
-                "foreground": "#35FF78",
+                "foreground": "#14FF53",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "XML namespace tags (bx:*)",
+            "scope": [
+                "text.html.cfml entity.name.tag.localname.xml",
+                "text.html.cfml entity.name.tag.namespace.xml",
+                "text.xml entity.name.tag.namespace.xml",
+                "text.xml entity.name.tag.localname.xml",
+                "source.cfml entity.name.tag.namespace.xml",
+                "source.cfml entity.name.tag.localname.xml"
+            ],
+            "settings": {
+                "foreground": "#14FF53",
                 "fontStyle": "bold"
             }
         },
         {
             "scope": [
-                "entity.name.tag.boxlang.component",
-                "meta.tag.boxlang entity.name.tag",
-                "source.boxlang entity.name.tag"
+                "entity.name.tag.cfml",
+                "entity.name.tag.cf",
+                "meta.tag.cfml entity.name.tag",
+                "source.cfml entity.name.tag"
             ],
             "settings": {
-                "foreground": "#FF6B35",
+                "foreground": "#14FF53",
                 "fontStyle": "bold"
             }
         },
@@ -323,7 +352,18 @@
                 "punctuation.definition.tag.end.boxlang"
             ],
             "settings": {
-                "foreground": "#14FF76"
+                "foreground": "#14FF53"
+            }
+        },
+        {
+            "scope": [
+                "punctuation.definition.tag.cfml",
+                "punctuation.definition.tag.begin.cfml",
+                "punctuation.definition.tag.end.cfml",
+                "punctuation.definition.tag.cf"
+            ],
+            "settings": {
+                "foreground": "#14FF53"
             }
         },
         {
@@ -507,10 +547,19 @@
         {
             "scope": [
                 "markup.heading",
-                "entity.name.section"
+                "entity.name.section",
+                "markup.heading.1",
+                "markup.heading.2",
+                "markup.heading.3",
+                "markup.heading.4",
+                "markup.heading.5",
+                "markup.heading.6",
+                "markup.heading.setext.1",
+                "markup.heading.setext.2"
             ],
             "settings": {
-                "foreground": "#FF6B35"
+                "foreground": "#85eea7",
+                "fontStyle": "bold"
             }
         },
         {
@@ -536,6 +585,38 @@
             "scope": "string.other.link.description",
             "settings": {
                 "foreground": "#85EEA7"
+            }
+        },
+        {
+            "scope": [
+                "markup.bold",
+                "markup.bold.markdown"
+            ],
+            "settings": {
+                "foreground": "#85eea7",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "scope": [
+                "markup.italic",
+                "markup.italic.markdown"
+            ],
+            "settings": {
+                "foreground": "#78A8D6",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "scope": [
+                "markup.inline.raw",
+                "markup.inline.raw.markdown",
+                "markup.raw.inline",
+                "markup.fenced_code",
+                "punctuation.definition.raw.markdown"
+            ],
+            "settings": {
+                "foreground": "#FF1493"
             }
         },
         {
