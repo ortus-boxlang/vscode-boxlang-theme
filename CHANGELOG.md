@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.0] - 2025-09-08
+
 ### Updated
 
 - Dark theme visualization improvements for git, gitlens, markdown, and much more.
@@ -25,3 +27,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Initial Release
 
 [1.0.0]: https://github.com/ortus-boxlang/vscode-boxlang-theme/releases/tag/v1.0.0
+[unreleased]: https://github.com/ortus-boxlang/vscode-boxlang-theme/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/ortus-boxlang/vscode-boxlang-theme/compare/195d7b87279f094306f4a7fb6bf7640a213e5677...v1.1.0
