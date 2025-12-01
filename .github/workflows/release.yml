@@ -41,7 +41,7 @@ jobs:
       fileName: ${{ steps.setup-env.outputs.fileName }}
     steps:
       - name: Checkout source
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -82,7 +82,7 @@ jobs:
     # Only if not snapshot
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - uses: actions/download-artifact@v5
         with:
@@ -99,7 +99,7 @@ jobs:
     # Only for master branch
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - uses: actions/download-artifact@v5
         with:
@@ -120,7 +120,7 @@ jobs:
     # Only for master branch
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - uses: actions/download-artifact@v5
         with:
@@ -199,7 +199,7 @@ jobs:
     steps:
       # Checkout development
       - name: Checkout Repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: development
 
